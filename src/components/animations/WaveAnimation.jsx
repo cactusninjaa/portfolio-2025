@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Wave from './Wave';
-import DropAnimation from './DropAnimation';
 
 export default function WaveAnimation() {
 
-  return (
-    <div className="relative w-full md:w-1/3 h-full overflow-hidden border-3 border-black" >
+    
+return (
+    <div className="relative hidden md:block w-1/2 lg:w-1/3 h-full overflow-hidden md:border-3 border-black" >
         <motion.svg 
             className="absolute bottom-0 w-full z-10"
             viewBox="0 0 300 60"
@@ -16,7 +16,7 @@ export default function WaveAnimation() {
         </motion.svg>
         <motion.svg 
             className="absolute bottom-0 w-full z-9"
-            viewBox="0 0 350 100"
+            viewBox="0 0 340 100"
             preserveAspectRatio="none"
         >
             <Wave fillColor="var(--color-blue)"/>
@@ -24,7 +24,7 @@ export default function WaveAnimation() {
         <div className="absolute bottom-90 right-8 w-72 aspect-1/1 bg-orange rounded-full z-1"></div>
         <svg 
             className="absolute bottom-10 left-0 w-full z-8" 
-            viewBox="0 0 400 700" 
+            viewBox="0 0 400 600" 
             fill="none"
         >
             <path 
@@ -33,7 +33,7 @@ export default function WaveAnimation() {
         </svg>
         <svg 
             className="absolute bottom-0 left-0 w-full  z-7" 
-            viewBox="0 0 400 700" 
+            viewBox="0 0 400 600" 
             fill="none"
         >
             <path 
