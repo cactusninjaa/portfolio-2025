@@ -1,11 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import AnimatedHero from '../components/AnimatedHero.jsx';
+import ProjectsSection from '../components/ProjectsSection.astro';
 ---
 
-<Layout>
-    <h1 class="text-2xl text-darkgray font-bold">Welcome to Astro!</h1>
-    <p>This is a simple example of an Astro page.</p>
-    <p>Explore the documentation to learn more about how to build with Astro.</p>
-    <a href="https://astro.build">Astro Documentation</a>
-</Layou>
+<Layout >
+  <AnimatedHero  client:load />
+  <ProjectsSection />
+</Layout>
