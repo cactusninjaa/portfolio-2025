@@ -1,10 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AnimatedHero from '../components/AnimatedHero.jsx';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import { projects } from '../data/projects';
 
 ---
 
 <Layout>
-    <div class="flex items-center justify-center h-screen">
-        <h1 class="text-darkgray text-3xl font-bold">WIP ...</h1>
-    </div>
-</Layou>
+  <main class="max-w-7xl mx-auto">
+    <AnimatedHero  client:load />
+    <ProjectsSection projects={projects} sectionTitle="Mes projets" />
+  </main>
+</Layout>
