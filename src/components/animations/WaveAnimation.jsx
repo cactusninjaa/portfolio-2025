@@ -6,7 +6,7 @@ export default function WaveAnimation() {
 
     
 return (
-    <div className="relative hidden md:block w-1/2 lg:w-1/3 h-full overflow-hidden md:border-3 border-black" >
+    <div className="relative hidden md:block w-1/2 lg:w-1/3 h-full overflow-hidden md:border-3 border-black" > 
         <motion.svg 
             className="absolute bottom-0 w-full z-10"
             viewBox="0 0 300 60"
@@ -41,6 +41,6 @@ return (
                 fill="#100E24" 
             />
         </svg>
-    </div>
+        </div>
   );
 }

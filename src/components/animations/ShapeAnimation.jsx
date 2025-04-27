@@ -50,8 +50,9 @@ export default function AnimatedWaves() {
     }
   };
 
-  return (
-    <div className="relative hidden lg:block lg:w-1/3 h-full overflow-hidden lg:border-3 border-black" >
+return (
+  <div className="relative hidden lg:block lg:w-1/3 h-full overflow-hidden lg:border-3 border-black" >
+
       {/* Cercle rouge avec contour bleu en haut */}
 
       <motion.div 

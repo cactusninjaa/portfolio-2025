@@ -6,6 +6,7 @@
     --breakpoint-lg: 1200px;
     --breakpoint-xl: 1200px;
     --breakpoint-2xl: 1600px;
+    --breakpoint-3xl: 600px;
     --color-black: #050608;
     --color-cream: #F0EBDF;
     --color-white: #FFFFFF;
@@ -20,6 +21,7 @@
     --font-body: 'Roboto', sans-serif;
     --padding-desktop : 48px;
     --padding-mobile : 12px;
+    --container-7xl: 1280px;
 }
 
 body {

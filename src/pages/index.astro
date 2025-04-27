@@ -2,9 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import AnimatedHero from '../components/AnimatedHero.jsx';
 import ProjectsSection from '../components/ProjectsSection.astro';
+import { projects } from '../data/projects';
+
 ---
 
-<Layout >
-  <AnimatedHero  client:load />
-  <ProjectsSection />
+<Layout>
+  <main class="max-w-7xl mx-auto">
+    <AnimatedHero  client:load />
+    <ProjectsSection projects={projects} sectionTitle="Mes projets" />
+  </main>
 </Layout>
