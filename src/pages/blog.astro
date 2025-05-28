@@ -1,0 +1,118 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Vous pourrez plus tard récupérer automatiquement tous vos posts
+const posts = [
+  {
+    title: "My First Blog Post",
+    description: "This is the first post of my new Astro blog.",
+    url: "/posts/post-1/",
+    pubDate: "2022-07-01",
+    author: "Astro Learner",
+    tags: ["astro", "blogging", "learning in public"],
+  },
+];
+
+// Format des dates
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+---
+
+<Layout>
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- En-tête de la page blog -->
+    <header class="mb-12">
+      <div class="mb-4">
+        <a
+          href="/"
+          class="text-blue hover:text-darkblue transition-colors duration-200 flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+          Retour à l'accueil
+        </a>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-light mb-6 text-black">Mon Blog</h1>
+
+      <p class="text-lg text-darkgray leading-relaxed max-w-2xl">
+        Ici, je partage mes découvertes, mes apprentissages et mes réflexions
+        sur le développement web et la technologie.
+      </p>
+    </header>
+
+    <!-- Liste des articles -->
+    <section>
+      <div class="grid gap-8">
+        {
+          posts.map((post) => (
+            <article class="group">
+              <a href={post.url} class="block">
+                <div class="border border-neutral-200 rounded-lg p-6 hover:border-blue transition-colors duration-200">
+                  <div class="mb-4">
+                    <h2 class="text-2xl font-medium mb-2 group-hover:text-blue transition-colors duration-200">
+                      {post.title}
+                    </h2>
+                    <div class="flex items-center gap-4 text-sm text-darkgray mb-3">
+                      <span>Par {post.author}</span>
+                      <span>•</span>
+                      <time datetime={post.pubDate}>
+                        {formatDate(post.pubDate)}
+                      </time>
+                    </div>
+                  </div>
+
+                  <p class="text-darkgray leading-relaxed mb-4">
+                    {post.description}
+                  </p>
+
+                  <div class="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span class="px-3 py-1 bg-lightblue text-white text-sm rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div class="flex items-center gap-2 mt-4 text-blue group-hover:gap-3 transition-all duration-200">
+                    <span class="text-sm font-medium">Lire l'article</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 7h10v10" />
+                      <path d="M7 17 17 7" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>

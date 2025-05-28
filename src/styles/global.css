@@ -35,3 +35,167 @@ body {
     height: 100%;
     box-sizing: border-box;
 }
+
+/* Styles pour le contenu des articles de blog */
+.prose {
+    line-height: 1.7;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: var(--color-black);
+}
+
+.prose h1 {
+    font-size: 2.25rem;
+}
+
+.prose h2 {
+    font-size: 1.875rem;
+}
+
+.prose h3 {
+    font-size: 1.5rem;
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+    color: var(--color-darkgray);
+}
+
+.prose a {
+    color: var(--color-blue);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.prose a:hover {
+    color: var(--color-darkblue);
+}
+
+.prose ul, .prose ol {
+    margin: 1.5em 0;
+    padding-left: 2em;
+}
+
+.prose li {
+    margin: 0.5em 0;
+    color: var(--color-darkgray);
+}
+
+.prose blockquote {
+    border-left: 4px solid var(--color-lightblue);
+    padding-left: 1.5em;
+    margin: 2em 0;
+    font-style: italic;
+    background-color: var(--color-cream);
+    padding: 1em 1.5em;
+    border-radius: 4px;
+}
+
+.prose code {
+    background-color: var(--color-cream);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.prose pre {
+    background-color: var(--color-darkgray);
+    color: var(--color-white);
+    padding: 1.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2em 0;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* Styles pour le contenu des articles de blog */
+.prose {
+    line-height: 1.7;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: var(--color-black);
+}
+
+.prose h1 {
+    font-size: 2.25rem;
+}
+
+.prose h2 {
+    font-size: 1.875rem;
+}
+
+.prose h3 {
+    font-size: 1.5rem;
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+    color: var(--color-darkgray);
+}
+
+.prose a {
+    color: var(--color-blue);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.prose a:hover {
+    color: var(--color-darkblue);
+}
+
+.prose ul, .prose ol {
+    margin: 1.5em 0;
+    padding-left: 2em;
+}
+
+.prose li {
+    margin: 0.5em 0;
+    color: var(--color-darkgray);
+}
+
+.prose blockquote {
+    border-left: 4px solid var(--color-lightblue);
+    padding-left: 1.5em;
+    margin: 2em 0;
+    font-style: italic;
+    background-color: var(--color-cream);
+    padding: 1em 1.5em;
+    border-radius: 4px;
+}
+
+.prose code {
+    background-color: var(--color-cream);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.prose pre {
+    background-color: var(--color-darkgray);
+    color: var(--color-white);
+    padding: 1.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2em 0;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}

@@ -24,7 +24,7 @@ export const projects = [
         date: "2024-02-04",
         description: "This portfolio was developed with HTML, SCSS, and JavaScript. It reflects a strong foundation in web development fundamentals, with a focus on custom styling, interactive elements, and responsive layouts. The project emphasizes clean structure, cross-browser compatibility, and attention to detail.",
         techStack: ["SCSS", "HTML", "JS"],
-        link: "https://cactusninjaa.github.io/portfolio/",
+        link: "https://cactusninjaa.github.io/portfolio-2024/",
         image: "/images/projects/project-001.png"   
     },
 ];

@@ -1,0 +1,102 @@
+---
+import Layout from "./Layout.astro";
+
+interface Props {
+  frontmatter: {
+    title: string;
+    pubDate: string;
+    description: string;
+    author: string;
+    image?: {
+      url: string;
+      alt: string;
+    };
+    tags: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+
+// Format de la date
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString(
+  "fr-FR",
+  {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }
+);
+---
+
+<Layout>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- En-tête de l'article -->
+        <header class="mb-12">
+        <div class="mb-4">
+            <a
+            href="/blog"
+            class="text-blue hover:text-darkblue transition-colors duration-200 flex items-center gap-2"
+            >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M15 18l-6-6 6-6"></path>
+            </svg>
+            Retour au blog
+            </a>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-light mb-6 text-black">
+            {frontmatter.title}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm text-darkgray mb-6">
+            <span>Par {frontmatter.author}</span>
+            <span>•</span>
+            <time datetime={frontmatter.pubDate}>{formattedDate}</time>
+        </div>
+
+        {
+            frontmatter.image && (
+            <div class="mb-8">
+                <img
+                src={frontmatter.image.url}
+                alt={frontmatter.image.alt}
+                class="w-full h-64 md:h-96 object-cover rounded-lg"
+                />
+            </div>
+            )
+        }
+
+        <p class="text-lg text-darkgray leading-relaxed">
+            {frontmatter.description}
+        </p>
+
+        {
+            frontmatter.tags && frontmatter.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-6">
+                {frontmatter.tags.map((tag) => (
+                <span class="px-3 py-1 bg-lightblue text-white text-sm rounded-full">
+                    {tag}
+                </span>
+                ))}
+            </div>
+            )
+        }
+        </header>
+
+        <!-- Contenu de l'article -->
+        <article class="prose prose-lg max-w-none">
+        <slot />
+        </article>
+    </main>
+</Layout>
+
